@@ -42,12 +42,12 @@ import { TextTransformation } from '@ckeditor/ckeditor5-typing';
 import { SimpleUploadAdapter } from '@ckeditor/ckeditor5-upload';
 import { EditorWatchdog } from '@ckeditor/ckeditor5-watchdog';
 import { WordCount } from '@ckeditor/ckeditor5-word-count';
-declare class Editor extends ClassicEditor {
+declare class ClassicEditorPlus extends ClassicEditor {
     static builtinPlugins: (typeof Alignment | typeof AutoImage | typeof AutoLink | typeof Autoformat | typeof Autosave | typeof BlockQuote | typeof Bold | typeof CloudServices | typeof Code | typeof CodeBlock | typeof DataFilter | typeof DataSchema | typeof Essentials | typeof FindAndReplace | typeof FontBackgroundColor | typeof FontColor | typeof FontFamily | typeof FontSize | typeof GeneralHtmlSupport | typeof Heading | typeof Highlight | typeof HorizontalLine | typeof HtmlComment | typeof HtmlEmbed | typeof Image | typeof ImageCaption | typeof ImageInsert | typeof ImageResize | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof Indent | typeof IndentBlock | typeof Italic | typeof Link | typeof LinkImage | typeof List | typeof ListProperties | typeof Markdown | typeof MediaEmbed | typeof MediaEmbedToolbar | typeof Mention | typeof PageBreak | typeof Paragraph | typeof PasteFromOffice | typeof RemoveFormat | typeof SelectAll | typeof ShowBlocks | typeof SimpleUploadAdapter | typeof SourceEditing | typeof SpecialCharacters | typeof SpecialCharactersArrows | typeof SpecialCharactersCurrency | typeof SpecialCharactersEssentials | typeof SpecialCharactersLatin | typeof SpecialCharactersMathematical | typeof SpecialCharactersText | typeof StandardEditingMode | typeof Strikethrough | typeof Style | typeof Subscript | typeof Superscript | typeof Table | typeof TableCaption | typeof TableCellProperties | typeof TableColumnResize | typeof TableProperties | typeof TableToolbar | typeof TextPartLanguage | typeof TextTransformation | typeof Title | typeof TodoList | typeof Underline | typeof WordCount)[];
     static defaultConfig: EditorConfig;
 }
 declare const _default: {
-    Editor: typeof Editor;
+    ClassicEditorPlus: typeof ClassicEditorPlus;
     EditorWatchdog: typeof EditorWatchdog;
 };
 export default _default;
