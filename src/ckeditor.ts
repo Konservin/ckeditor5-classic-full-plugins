@@ -5,12 +5,10 @@
 
 import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
 
-import { UploadAdapter } from '@ckeditor/ckeditor5-adapter-ckfinder';
 import { Alignment } from '@ckeditor/ckeditor5-alignment';
 import { Autoformat } from '@ckeditor/ckeditor5-autoformat';
 import { Autosave } from '@ckeditor/ckeditor5-autosave';
 import {
-	Bold,
 	Code,
 	Italic,
 	Strikethrough,
@@ -18,8 +16,6 @@ import {
 	Superscript,
 	Underline
 } from '@ckeditor/ckeditor5-basic-styles';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
 import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
 import type { EditorConfig } from '@ckeditor/ckeditor5-core';
 import { Essentials } from '@ckeditor/ckeditor5-essentials';
@@ -36,7 +32,6 @@ import {
 	HtmlComment
 } from '@ckeditor/ckeditor5-html-support';
 import {
-	AutoImage,
 	Image,
 	ImageCaption,
 	ImageInsert,
@@ -46,9 +41,9 @@ import {
 	ImageUpload
 } from '@ckeditor/ckeditor5-image';
 import { Indent, IndentBlock } from '@ckeditor/ckeditor5-indent';
-import { TextPartLanguage } from '@ckeditor/ckeditor5-language';
 import { AutoLink, Link, LinkImage } from '@ckeditor/ckeditor5-link';
 import { List, ListProperties, TodoList } from '@ckeditor/ckeditor5-list';
+import { Markdown } from '@ckeditor/ckeditor5-markdown-gfm';
 import { MediaEmbed, MediaEmbedToolbar } from '@ckeditor/ckeditor5-media-embed';
 import { Mention } from '@ckeditor/ckeditor5-mention';
 import { PageBreak } from '@ckeditor/ckeditor5-page-break';
@@ -78,6 +73,7 @@ import {
 	TableToolbar
 } from '@ckeditor/ckeditor5-table';
 import { TextTransformation } from '@ckeditor/ckeditor5-typing';
+import { SimpleUploadAdapter } from '@ckeditor/ckeditor5-upload';
 import { EditorWatchdog } from '@ckeditor/ckeditor5-watchdog';
 import { WordCount } from '@ckeditor/ckeditor5-word-count';
 
@@ -87,13 +83,9 @@ import { WordCount } from '@ckeditor/ckeditor5-word-count';
 class Editor extends ClassicEditor {
 	public static override builtinPlugins = [
 		Alignment,
-		AutoImage,
 		AutoLink,
 		Autoformat,
 		Autosave,
-		BlockQuote,
-		Bold,
-		CloudServices,
 		Code,
 		CodeBlock,
 		DataFilter,
@@ -124,6 +116,7 @@ class Editor extends ClassicEditor {
 		LinkImage,
 		List,
 		ListProperties,
+		Markdown,
 		MediaEmbed,
 		MediaEmbedToolbar,
 		Mention,
@@ -133,6 +126,7 @@ class Editor extends ClassicEditor {
 		RemoveFormat,
 		SelectAll,
 		ShowBlocks,
+		SimpleUploadAdapter,
 		SourceEditing,
 		SpecialCharacters,
 		SpecialCharactersArrows,
@@ -152,12 +146,10 @@ class Editor extends ClassicEditor {
 		TableColumnResize,
 		TableProperties,
 		TableToolbar,
-		TextPartLanguage,
 		TextTransformation,
 		Title,
 		TodoList,
 		Underline,
-		UploadAdapter,
 		WordCount
 	];
 
@@ -166,7 +158,6 @@ class Editor extends ClassicEditor {
 			items: [
 				'heading',
 				'|',
-				'bold',
 				'italic',
 				'link',
 				'bulletedList',
@@ -176,7 +167,6 @@ class Editor extends ClassicEditor {
 				'indent',
 				'|',
 				'imageUpload',
-				'blockQuote',
 				'insertTable',
 				'mediaEmbed',
 				'undo',
@@ -185,16 +175,16 @@ class Editor extends ClassicEditor {
 				'code',
 				'codeBlock',
 				'findAndReplace',
-				'fontBackgroundColor',
 				'fontColor',
 				'fontFamily',
 				'fontSize',
+				'fontBackgroundColor',
 				'highlight',
 				'horizontalLine',
 				'htmlEmbed',
-				'imageInsert',
 				'pageBreak',
 				'removeFormat',
+				'imageInsert',
 				'selectAll',
 				'showBlocks',
 				'sourceEditing',
@@ -204,7 +194,6 @@ class Editor extends ClassicEditor {
 				'style',
 				'subscript',
 				'superscript',
-				'textPartLanguage',
 				'todoList',
 				'underline'
 			]
