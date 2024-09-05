@@ -9,6 +9,7 @@ import { Alignment } from '@ckeditor/ckeditor5-alignment';
 import { Autoformat } from '@ckeditor/ckeditor5-autoformat';
 import { Autosave } from '@ckeditor/ckeditor5-autosave';
 import {
+	Bold,
 	Code,
 	Italic,
 	Strikethrough,
@@ -85,6 +86,7 @@ class Editor extends ClassicEditor {
 		AutoLink,
 		Autoformat,
 		Autosave,
+		Bold,
 		Code,
 		CodeBlock,
 		DataFilter,
@@ -145,7 +147,6 @@ class Editor extends ClassicEditor {
 		TableProperties,
 		TableToolbar,
 		TextTransformation,
-		Title,
 		TodoList,
 		Underline,
 		WordCount
@@ -156,6 +157,7 @@ class Editor extends ClassicEditor {
 			items: [
 				'heading',
 				'|',
+				'bold',
 				'italic',
 				'link',
 				'bulletedList',
