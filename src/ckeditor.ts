@@ -17,6 +17,7 @@ import {
 	Superscript,
 	Underline
 } from '@ckeditor/ckeditor5-basic-styles';
+import { BoldPlugin } from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
 import type { EditorConfig } from '@ckeditor/ckeditor5-core';
 import { Essentials } from '@ckeditor/ckeditor5-essentials';
@@ -86,6 +87,7 @@ class Editor extends ClassicEditor {
 		Autoformat,
 		Autosave,
 		Bold,
+		BoldPlugin,
 		Code,
 		CodeBlock,
 		DataFilter,
