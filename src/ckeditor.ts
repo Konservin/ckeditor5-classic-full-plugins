@@ -3,6 +3,7 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
+//import { Editor } from '@ckeditor/ckeditor5-core';
 import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
 
 import { Alignment } from '@ckeditor/ckeditor5-alignment';
@@ -17,7 +18,6 @@ import {
 	Superscript,
 	Underline
 } from '@ckeditor/ckeditor5-basic-styles';
-import { BoldPlugin } from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
 import type { EditorConfig } from '@ckeditor/ckeditor5-core';
 import { Essentials } from '@ckeditor/ckeditor5-essentials';
@@ -80,14 +80,13 @@ import { WordCount } from '@ckeditor/ckeditor5-word-count';
 
 // See https://ckeditor.com/docs/ckeditor5/latest/installation/plugins/installing-plugins.html for details.
 
-class Editor extends ClassicEditor {
-	public static override builtinPlugins = [
+class CKEditor extends ClassicEditor {
+	static override builtinPlugins = [
 		Alignment,
 		AutoLink,
 		Autoformat,
 		Autosave,
 		Bold,
-		BoldPlugin,
 		Code,
 		CodeBlock,
 		DataFilter,
@@ -153,7 +152,7 @@ class Editor extends ClassicEditor {
 		WordCount
 	];
 
-	public static override defaultConfig: EditorConfig = {
+	static override defaultConfig = {
 		toolbar: {
 			items: [
 				'heading',
@@ -222,4 +221,4 @@ class Editor extends ClassicEditor {
 	};
 }
 
-export default { Editor, EditorWatchdog };
+export default { CKEditor, EditorWatchdog };
