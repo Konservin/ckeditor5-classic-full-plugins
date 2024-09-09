@@ -3,16 +3,17 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
-//import { Editor } from '@ckeditor/ckeditor5-core';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
+import { ClassicEditor, Essentials, Bold, Italic, Font, Paragraph } from 'ckeditor5';
 
-
+import 'ckeditor5/ckeditor5.css';
 
 // See https://ckeditor.com/docs/ckeditor5/latest/installation/plugins/installing-plugins.html for details.
 
 class CKEditor extends ClassicEditor {
-
-
+	static override builtinPlugins = [
+		Bold,
+		Italic,
+	];
 	static override defaultConfig = {
 		toolbar: {
 			items: [
