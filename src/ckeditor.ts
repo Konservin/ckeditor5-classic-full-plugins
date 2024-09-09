@@ -7,9 +7,11 @@
 import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
 
 
+
 // See https://ckeditor.com/docs/ckeditor5/latest/installation/plugins/installing-plugins.html for details.
 
 class CKEditor extends ClassicEditor {
+
 
 	static override defaultConfig = {
 		toolbar: {
